@@ -1,0 +1,22 @@
+﻿@using Sitecore.Mvc
+@* @using Sitecore.Mvc.Analytics.Extensions *@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+    @* @Html.Sitecore().VisitorIdentification() *@
+</head>
+<body>
+<h1>@Html.Sitecore().Field("title")</h1>
+<div>
+    @Html.Sitecore().Placeholder("main")
+</div>
+</body>
+</html>
